@@ -1,0 +1,12 @@
+P = []
+lag = np.arange(-20,21,1)
+
+for i in lag:
+    P.append(ACF(X,i))
+    
+    
+plt.stem(lag,P,use_line_collection=True)
+plt.title("Auto correlation plot of X")
+plt.xlabel("Lags")
+plt.ylabel("Magnitude")
+plt.show()
