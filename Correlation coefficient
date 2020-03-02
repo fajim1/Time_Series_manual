@@ -6,4 +6,4 @@ def correlation_coefficent_cal(x,y):
     x_var_y_var = (np.sqrt(np.sum((x-x.mean())**2)))* (np.sqrt(np.sum((y-y.mean())**2)))
     
     r = cross_var/x_var_y_var
-    return r
+    return r 
