@@ -1,0 +1,46 @@
+def ACF(x,l):
+    x = np.array(x)
+    x1 = x
+    x_mean = x.mean()
+    
+    if (l==0):
+        
+        return 1
+    
+    elif (l>0):
+        
+        y1 = x1
+        for i in range(l):
+            
+            x1 = np.delete(x1,0)
+            
+            
+            y1 = np.delete(y1,len(y1)-1)
+            
+            
+        
+        x1 = x1-x_mean
+        y1 = y1-x_mean
+        
+        
+    else:
+        
+        l = l*-1
+        
+        y1 = x1
+        for i in range(l):
+            
+            x1 = np.delete(x1,0)
+            
+            
+            y1 = np.delete(y1,len(y1)-1)
+            
+            
+        x1 = x1-x_mean
+        y1 = y1-x_mean
+        
+    r = np.sum(x1*y1)
+    d = np.sum((x-x.mean())**2)
+    z = r/d
+    return z
+    
