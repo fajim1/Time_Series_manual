@@ -1,0 +1,9 @@
+#for one step ahead prediction
+Nav1 = y1
+Nav1 = np.append(Nav1,y1[1])
+
+#For prediction given training and testing set
+naive = y_train[len(y_train)-1]
+y_pred = np.array(y_pred)
+y_pred = np.append(y_pred,[naive]*len(y_test))
+Passengers
