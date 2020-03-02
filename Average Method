@@ -1,0 +1,9 @@
+#for one step ahead prediction
+Avg1 = y1
+Avg1 = np.append(Avg1,y1.mean())
+
+#For prediction given training and testing set
+mean = y_train.mean()
+y_pred = np.array(y_pred)
+y_pred = np.append(y_pred,[mean]*len(y_test))
+Passengers
